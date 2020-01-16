@@ -23,7 +23,7 @@ resource "aws_instance" "ts-example-00" {
               EOF
 
   tags = {
-    Name = "terraform-example-2"
+    Name = "terraform-infrastructure-example"
     Owner = "tstanislawczyk"
     Description = "opis testowy"
   }
