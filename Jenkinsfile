@@ -40,6 +40,7 @@ try {
       ]]) {
         ansiColor('xterm') {
           sh 'terraform plan'
+          
         }
       }
     }
