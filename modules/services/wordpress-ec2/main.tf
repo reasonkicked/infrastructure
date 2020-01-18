@@ -1,17 +1,3 @@
-provider "aws" {
-  region = "eu-west-1"
-}
-# Terraform state will be stored in S3
-
-terraform {
-  backend "s3" {
-    bucket = "reasonkicked-infrastructure-s3"
-    key    = "terraform.tfstate"
-    region = "eu-west-1"
-  }
-
-}
-
 resource "aws_instance" "ts-example-00" {
   ami                    = "ami-02df9ea15c1778c9c"
   instance_type          = "t2.micro"
@@ -23,7 +9,7 @@ resource "aws_instance" "ts-example-00" {
               EOF
 
   tags = {
-    Name = "terraform-infrastructure-example"
+    Name = "terraform-infrastructure-example-01"
     Owner = "tstanislawczyk"
     Description = "opis testowy"
   }
