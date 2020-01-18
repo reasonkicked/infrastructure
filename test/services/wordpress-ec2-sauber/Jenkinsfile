@@ -1,6 +1,6 @@
 // Jenkinsfile
 String credentialsId = 'awsCredentials'
-
+cd test/services/wordpress-ec2-sauber
 try {
 
   
