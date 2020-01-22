@@ -5,7 +5,7 @@ resource "aws_instance" "ts-example-00" {
   user_data = <<-EOF
               #!/bin/bash
               apt update -y
-              apt install hhtpd-y
+              apt install hhtpd -y
               apt install php php-mysql -y
               apt install mysql-server -y
               apt install openssh-server
