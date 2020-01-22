@@ -3,8 +3,8 @@ provider "aws" {
 }
 module "wordpress-ec2" {
   source = "../../../modules/services/wordpress-ec2"
-  ec2_instance_name = "ts-instance-ec2-05"
-  ami_key_pair_name = "ts-aws-3"
+  ec2_instance_name = "ts-instance-ec2-06"
+  ami_key_pair_name = "TS-aws-3"
 
 }
 
