@@ -16,5 +16,5 @@ module "wordpress-ec2" {
     encrypt        = true
   }
 }
-}
+
 
