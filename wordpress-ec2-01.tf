@@ -14,7 +14,7 @@ resource "aws_instance" "ts-example-00" {
               mysqladmin -uroot create mydb
               cd /var/www/html
               wget http://wordpress.org/latest.tar.gz
-              tar - xzf latest.tar.gz
+              tar -xzf latest.tar.gz
               mv wordpress/ testwordpress
               cd testwordpress
               mv wp-config-sample.php wp-config.php
