@@ -1,7 +1,7 @@
 resource "aws_instance" "ts-example-00" {
   ami                    = "ami-02df9ea15c1778c9c"
   instance_type          = "t2.micro"
-    key_name = "TS-aws-3"
+    //key_name = "TS-aws-3"
   user_data = <<-EOF
               #!/bin/bash
               apt update -y
@@ -20,7 +20,7 @@ resource "aws_instance" "ts-example-00" {
               EOF
 
   tags = {
-    Name = "wordpress-ec2-01-instance"
+    Name = "wordpress-ec2-02-instance"
     Owner = "tstanislawczyk"
     Description = "opis testowy"
   }
