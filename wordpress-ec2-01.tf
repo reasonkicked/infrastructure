@@ -7,7 +7,7 @@ resource "aws_instance" "ts-example-00" {
               apt update -y
               apt install hhtpd-y
               apt install php php-mysql -y
-              apt install mysql-server-y
+              apt install mysql-server -y
               apt install openssh-server
               service httpd start
               service mysqld start
