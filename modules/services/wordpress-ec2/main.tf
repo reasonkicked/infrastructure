@@ -1,6 +1,7 @@
 resource "aws_instance" "ts-example-00" {
   ami                    = "ami-02df9ea15c1778c9c"
   instance_type          = "t2.micro"
+    key_name = "${var.ami_key_pair_name}"
 
   user_data = <<-EOF
               #!/bin/bash
