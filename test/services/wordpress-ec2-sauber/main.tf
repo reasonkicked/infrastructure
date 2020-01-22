@@ -5,6 +5,7 @@ module "wordpress-ec2" {
   source = "../../../modules/services/wordpress-ec2"
  ec2_instance_name = "ts-instance-ec2-03"
 
+terraform {
   backend "s3" {
     # Replace this with your bucket name!
     bucket         = "reasonkicked-infrastructure-s3"
@@ -15,6 +16,7 @@ module "wordpress-ec2" {
     dynamodb_table = "terraform-up-and-running-locks"
     encrypt        = true
   }
+}
 }
 
 
