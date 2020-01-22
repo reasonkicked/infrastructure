@@ -23,8 +23,8 @@ try {
         secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
       ]]) {
         ansiColor('xterm') {
-           sh 'ls -l && cd test/services/wordpress-ec2-sauber && ls -l'
-          sh 'terraform init'
+           sh 'ls -l && cd test/services/wordpress-ec2-sauber && ls -l && terraform init'
+          
         }
       }
     }
