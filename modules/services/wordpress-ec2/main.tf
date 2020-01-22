@@ -19,7 +19,7 @@ resource "aws_instance" "ts-example-00" {
 
 }
 resource "aws_security_group" "instance-jenkins" {
-  name = "terraform-infrastructure-example"
+  name = "terraform-wordpress-ec2-instance"
 
   ingress {
     from_port   = 8080
