@@ -8,6 +8,6 @@ module "wordpress-ec2" {
 
 }
 
-}
+
 
 
