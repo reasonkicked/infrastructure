@@ -18,7 +18,7 @@ resource "aws_instance" "ts-example-00" {
   }
 
 }
-resource "aws_security_group" "instance-jenkins" {
+/* resource "aws_security_group" "instance-jenkins" {
   name = "terraform-wordpress-ec2-instance"
 
   ingress {
@@ -28,3 +28,4 @@ resource "aws_security_group" "instance-jenkins" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+*/
