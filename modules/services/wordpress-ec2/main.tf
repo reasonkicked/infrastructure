@@ -17,6 +17,18 @@ resource "aws_instance" "ts-example-00" {
     create_before_destroy = true
   }
 
+terraform {
+  backend "s3" {
+    # Replace this with your bucket name!
+    bucket         = "reasonkicked-infrastructure-s3"
+    key            = "test/services/wordpress-ec2/terraform.tfstate"
+    region         = "eu-west-1"
+
+    # Replace this with your DynamoDB table name!
+    dynamodb_table = "terraform-up-and-running-locks"
+    encrypt        = true
+  }
+}
 }
 /* resource "aws_security_group" "instance-jenkins" {
   name = "terraform-wordpress-ec2-instance"
