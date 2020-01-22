@@ -24,6 +24,8 @@ try {
       ]]) {
         ansiColor('xterm') {
            sh 'ls -l'
+           sh 'cd test/services/wordpress-ec2-sauber'
+           sh 'ls -l'
           sh 'terraform init'
         }
       }
