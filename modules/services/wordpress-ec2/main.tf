@@ -4,6 +4,19 @@ resource "aws_instance" "ts-example-00" {
 
   user_data = <<-EOF
               #!/bin/bash
+              apt update -y
+              apt install hhtpd-y
+              apt install php php-mysql -y
+              apt install mysql-server-y
+              service httpd start
+              service mysqld start
+              mysqladmin -uroot create mydb
+              cd /var/www/html
+              wget http://wordpress.org/latest.tar.gz
+              tar -xzf latest.tar.gz
+              mv wordpress/ testwordpress
+              cd testwordpressmv wp-config-sample.php wp-config.php
+
               echo "Hello, World 202" > index.html
               nohup busybox httpd -f -p 8080 &
               EOF
