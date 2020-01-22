@@ -1,8 +1,6 @@
 // Jenkinsfile
 String credentialsId = 'awsCredentials'
-cd test
-cd services
-cd wordpress-ec2-sauber
+
 try {
 
   
@@ -25,6 +23,7 @@ try {
         secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
       ]]) {
         ansiColor('xterm') {
+           sh ls -l
           sh 'terraform init'
         }
       }
