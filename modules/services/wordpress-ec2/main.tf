@@ -15,10 +15,8 @@ resource "aws_instance" "ts-example-00" {
               wget http://wordpress.org/latest.tar.gz
               tar -xzf latest.tar.gz
               mv wordpress/ testwordpress
-              cd testwordpressmv wp-config-sample.php wp-config.php
-
-              echo "Hello, World 202" > index.html
-              nohup busybox httpd -f -p 8080 &
+              cd testwordpress
+              mv wp-config-sample.php wp-config.php             
               EOF
 
   tags = {
@@ -30,6 +28,9 @@ resource "aws_instance" "ts-example-00" {
     create_before_destroy = true
   }
 }
+
+/* echo "Hello, World 202" > index.html
+              nohup busybox httpd -f -p 8080 & */
 /* resource "aws_security_group" "instance-jenkins" {
   name = "terraform-wordpress-ec2-instance"
 
