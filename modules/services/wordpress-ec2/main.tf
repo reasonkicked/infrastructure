@@ -16,9 +16,6 @@ resource "aws_instance" "ts-example-00" {
   lifecycle {
     create_before_destroy = true
   }
-
-terraform {
-
 }
 /* resource "aws_security_group" "instance-jenkins" {
   name = "terraform-wordpress-ec2-instance"
