@@ -5,13 +5,13 @@ resource "aws_instance" "ts-example-00" {
   user_data = <<-EOF
               #!/bin/bash
               apt update -y
-              apt install hhtpd -y
-              apt install php php-mysql -y
+              apt install apache2 -y
+              apt install curl -y
               apt install mysql-server -y
+              apt install php libapache2-mod-php php-mysql
+              apt install php php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zipphp-mysql -y
               apt install openssh-server
-              service httpd start
-              service mysqld start
-              mysqladmin -uroot create mydb
+           
               cd /var/www/html
               wget http://wordpress.org/latest.tar.gz
               tar -xzf latest.tar.gz
@@ -25,9 +25,9 @@ resource "aws_instance" "ts-example-00" {
     Owner = "tstanislawczyk"
     Description = "opis testowy"
   }
-  lifecycle {
+ /* lifecycle {
     create_before_destroy = true
-  }
+  } */
 }
 
 resource "aws_key_pair" "default" {
