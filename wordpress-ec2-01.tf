@@ -12,8 +12,7 @@ resource "aws_instance" "ts-example-00" {
               apt install php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl -y
               apt install openssh-server
               apt update -y       
-              service mysql start  
-              mysqladmin -u root create mydb                       
+              service mysql start                      
               cd /var/www/html
               wget http://wordpress.org/latest.tar.gz
               tar -xzf latest.tar.gz
