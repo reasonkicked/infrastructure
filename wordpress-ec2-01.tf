@@ -11,13 +11,12 @@ resource "aws_instance" "ts-example-00" {
               apt install php libapache2-mod-php php-mysql -y
               apt install php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zipphp-mysql -y
               apt install openssh-server
+              apt update -y
               service mysql start  
               mysqladmin -u root create mydb                       
               cd /var/www/html
               wget http://wordpress.org/latest.tar.gz
               tar -xzf latest.tar.gz
-              mv wordpress/ testwordpress
-              cd testwordpress
               mv wp-config-sample.php wp-config.php
               EOF
 
