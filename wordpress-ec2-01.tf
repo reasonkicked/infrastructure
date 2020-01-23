@@ -21,7 +21,7 @@ resource "aws_instance" "ts-example-00" {
               EOF
 
   tags = {
-    Name = "wordpress-ec2-05-instance"
+    Name = "wordpress-ec2-01-instance"
     Owner = "tstanislawczyk"
     Description = "opis testowy"
   }
