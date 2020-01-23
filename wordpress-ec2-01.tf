@@ -12,13 +12,7 @@ resource "aws_instance" "ts-example-00" {
               apt install php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl -y
               apt install openssh-server
               apt update -y       
-              service mysql start  
-              mysql -u USER -pPASSWORD <<EOF
-                CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-                GRANT ALL ON wordpress.* TO 'wordpressuser'@'localhost' IDENTIFIED BY 'password';
-                FLUSH PRIVILEGES;
-                EXIT;
-                EOF                    
+              service mysql start                     
               cd /var/www/html
               wget http://wordpress.org/latest.tar.gz
               tar -xzf latest.tar.gz
@@ -27,7 +21,7 @@ resource "aws_instance" "ts-example-00" {
               EOF
 
   tags = {
-    Name = "wordpress-ec2-04-instance"
+    Name = "wordpress-ec2-05-instance"
     Owner = "tstanislawczyk"
     Description = "opis testowy"
   }
