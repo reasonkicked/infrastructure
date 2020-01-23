@@ -9,7 +9,7 @@ resource "aws_instance" "ts-example-00" {
               apt install curl -y
               apt install mysql-server -y
               apt install php libapache2-mod-php php-mysql -y
-              apt install php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zipphp-mysql -y
+              apt install php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl -y
               apt install openssh-server
               apt update -y
               service mysql start  
@@ -17,6 +17,7 @@ resource "aws_instance" "ts-example-00" {
               cd /var/www/html
               wget http://wordpress.org/latest.tar.gz
               tar -xzf latest.tar.gz
+              cd wordpress
               mv wp-config-sample.php wp-config.php
               EOF
 
