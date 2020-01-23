@@ -9,7 +9,7 @@ resource "aws_instance" "ts-example-00" {
               apt install curl -y
               apt install mysql-server -y
               apt install php libapache2-mod-php php-mysql -y
-              apt install php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zipphp-mysql
+              apt install php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zipphp-mysql -y
               apt install openssh-server
            
               cd /var/www/html
