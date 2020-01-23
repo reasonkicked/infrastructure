@@ -12,6 +12,7 @@ resource "aws_instance" "ts-example-00" {
               apt install php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl -y
               apt install openssh-server
               apt update -y
+              apt upgrade -y
               service mysql start  
               mysqladmin -u root create mydb                       
               cd /var/www/html
